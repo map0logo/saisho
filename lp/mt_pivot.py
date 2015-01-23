@@ -15,7 +15,7 @@ import numpy as np
 def get_values(line, num_type="int"):
     """(str) -> list
 
-    Return a list of numbers of type num_type from a line of values
+    Return a list of numbers of type num_type from a line of str values
     separated with spaces
 
     >>> get_values("3 4\n")
@@ -114,7 +114,7 @@ class SimplexPivoting():
 
     def __repr__(self):
         """(SimplexPivoting) -> str
-
+        String representation of Simplex Pivoting
 
         """
 
@@ -221,7 +221,7 @@ class SimplexPivoting():
         else:
             out_str = "UNBOUNDED"
         if filename:
-            out = file(filename, "w")
+            out = open(filename, "w")
             out.write(out_str)
             out.close()
         return out_str
@@ -254,7 +254,7 @@ class SimplexPivoting():
         else:
             out_str = "UNBOUNDED"
         if filename:
-            out = file(filename, "w")
+            out = open(filename, "w")
             out.write(out_str)
             out.close()
         return out_str
